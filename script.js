@@ -34,4 +34,6 @@ function setSavedTheme() {
   }
 }
 
+document.addEventListener
+
 document.addEventListener('DOMContentLoaded', setSavedTheme);
