@@ -10,8 +10,9 @@
 
 
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
 
-        <title>CSE 134B HW 3 Portfolio Website</title>
+        <title>CSE 134B HW 4 Portfolio Website</title>
     </head>
 
 
@@ -27,7 +28,10 @@
     <h1>Eric Huang </h1> 
 </header>
 
-<hr>
+<label class="switch">
+    <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+    <span class="slider"></span>
+</label>
 
 <main>
     <div class="Info">
@@ -110,9 +114,47 @@
     
     
             </section>
-    
+            
+            <h4>Contact Form </h4>
+            <form action="https://httpbin.org/post" method="post" oninput="">
+                <section id="name">
+                    <label for="text" name="fullname">Name:</label> <br>
+                    <input type="name" id="fullname" name="fullname" required placeholder="Name"  oninvalid="this.setCustomValidity('Please enter your name')" 
+                    oninput="this.setCustomValidity('')"
+                    pattern="[a-zA-Z0-9\s.,!?';:@]+"> <br>
+                </section>
+                <section id="email">
+                    <label for="email" name="email">Email:</label> <br>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com" oninvalid="this.setCustomValidity('Please enter a valid email address')" 
+                    oninput="this.setCustomValidity('')" pattern="[a-zA-Z0-9\s.,!?';:@]+"> <br>
+                    <!-- <output name="email">Error</output> -->
+                </section>
+                <section id="comment">
+                    <label for="text" id="comments" name="comments">Comments:</label> <br>
+                    <textarea id="commentArea" name="comments" placeholder="Comments here!" pattern="[a-zA-Z0-9\s.,!?';:@]+" maxlength="500"></textarea required>
+                    <div id="remainingCharacters"> 500 characters remaining</div>
 
+                    <script>
+                        const commentArea = document.getElementById('commentArea');
+                        const remainingText = document.getElementById('remainingCharacters');
+                        const MAX_CHARACTERS = 500;
+                        commentArea.addEventListener('input',() => {
+                            const remainder = MAX_CHARACTERS - commentArea.value.length;
+                            const color = remainder < MAX_CHARACTERS * 0.1 ? 'red' : null;
+                            remainingText.textContent = `${remainder} characters remaining`;
+                            remainingText.style.color = color;
+                        
+                        });
+                    </script>
+
+                </section>
+
+                <button type="submit">Submit</button>
+
+                <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+            </form>
         </div>
+
 </footer>
 
 </body>

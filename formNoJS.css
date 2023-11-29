@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'exo2','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .1rem;
+    line-height: 1.7rem;
+}
+@font-face {
+    font-family: 'exo2';
+    src: url('fonts/Exo2-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.formNoJS input:invalid {
+    background-color:ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 2px;
+}
+
+.formNoJS input:placeholder-shown{
+    border-radius: 2px;
+}

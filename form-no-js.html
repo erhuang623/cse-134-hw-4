@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Mock Portfolio">
+        <meta name="keywords" content="About, Resume, Contact">
+        
+        <meta name="author" content="Eric Huang">
+
+        <link rel="stylesheet" type="text/css" href="form-no-js.html">
+        <title>form-no-js.html</title>
+    </head>
+
+    <header>
+
+        <nav>
+            <button onclick="window.location.href='index.html'">About</button>
+            <button onclick="window.location.href='Resume.html'">Resume</button>
+            <button onclick="window.location.href='form-no-js.html'">Form</button>
+        </nav>
+    
+        <h1>Eric Huang </h1> 
+    </header>
+
+    <body>
+        
+        <div class="formNoJS">
+        <h4>Contact Form </h4>
+            <form action="https://httpbin.org/post" method="post">
+                <section id="name">
+                    <label for="text" name="fullname">Full Name:</label> <br>
+                    <input type="name" id="fullname" name="fullname" required placeholder="Name"> <br> 
+           
+                </section>
+                <section id="email">
+                    <label for="email" name="email">Email:</label> <br>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com"> <br>
+                  
+                </section>
+                <section id="comments">
+                    <label for="text" id="comments" name="comments">Comments:</label> <br>
+                    <textarea id="comments" name="comments" placeholder="Comments here!" minlength="0" maxlength="500"></textarea required>
+                </section>
+
+                <button type="submit">Submit</button>
+
+                <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+            </form>
+        </div>
+    </body>
