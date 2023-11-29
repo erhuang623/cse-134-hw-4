@@ -122,12 +122,19 @@
                     <input type="name" id="fullname" name="fullname" required placeholder="Name"  oninvalid="this.setCustomValidity('Please enter your name')" 
                     oninput="this.setCustomValidity('')"
                     pattern="[a-zA-Z0-9\s.,!?';:@]+"> <br>
+                    
+                    <output name="error" id="fullname"></output>
+                    <output name="information" id="fullname"></output>
+
                 </section>
+
                 <section id="email">
                     <label for="email" name="email">Email:</label> <br>
                     <input type="email" id="email" name="email" required placeholder="example@email.com" oninvalid="this.setCustomValidity('Please enter a valid email address')" 
                     oninput="this.setCustomValidity('')" pattern="[a-zA-Z0-9\s.,!?';:@]+"> <br>
-                    <!-- <output name="email">Error</output> -->
+                    <output name="error" id="email"></output>
+                    <output name="information" id="email"></output>
+                    
                 </section>
                 <section id="comment">
                     <label for="text" id="comments" name="comments">Comments:</label> <br>
