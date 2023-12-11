@@ -268,7 +268,7 @@ picture > img {
 
 #links > a{
     font-size: medium;
-    color: var(--bg-color-dark);
+    /* color: var(--bg-color-dark); */
 }
 
 #links > a:hover{
