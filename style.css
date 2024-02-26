@@ -17,7 +17,7 @@
     --text-color-normal: black;
     --bg-color-dark: rgb(0, 0, 0);
     --text-color-dark: white;
-    --box-color-normal:  hsl(0, 0%, 55%);
+    --box-color-normal:  hsl(206, 25%, 70%);
     --box-color-dark: gray;
     
 }
@@ -149,7 +149,9 @@ input:checked + .slider {
 }
 
 picture > img {
-    border: 3px solid var(--bg-color-dark,white);
+    border: 2px solid var(--bg-color-dark,white);
+    width: 80%;
+    height: 100%;
 }
 
 .Info section {
